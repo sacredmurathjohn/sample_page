@@ -14,8 +14,10 @@
 		<!-- Matomo -->
 <script>
   var _paq = window._paq = window._paq || [];
+  var element = getElementById('signup');
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(['trackPageView']);
+  _paq.push(['addListener', ]);
   _paq.push(['enableLinkTracking']);
   (function() {
     var u="https://sacredmurathjohn.matomo.cloud/";
@@ -49,7 +51,7 @@
 								<li><a href="generic.html">Generic</a></li>
 								<li><a href="elements.html">Elements</a></li>
 								<li><a href="#">Log In</a></li>
-								<li><a href="#">Sign Up</a></li>
+								<li><a id="signup" href="#">Sign Up</a></li>
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
