@@ -15,6 +15,10 @@
 <script>
   var _paq = window._paq = window._paq || [];
   var element = document.getElementById('signup');
+  element.addEventListener("click", function() {
+    console.log('click');
+});
+	
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(['trackPageView']);
   _paq.push(['addListener', element]);
