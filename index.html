@@ -15,20 +15,19 @@
     </noscript>
     <!-- Matomo -->
     <script>
-	let number = 0;
         window.onload = function () {
-	var _paq = window._paq = window._paq || [];
-		
+            let number = 0;
+            var _paq = window._paq = window._paq || [];
+
             var element = document.getElementById('signup');
             if (element) {
                 element.addEventListener("click", function () {
                     console.log('click');
-		    _paq.push(['trackEvent', 'Signup', 'Signup Click', number]);
+                    _paq.push(['trackEvent', 'Signup', 'Signup Click', number]);
                     number = number + 1;
                 });
             }
 
-           
 
             /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
             _paq.push(['trackPageView']);
