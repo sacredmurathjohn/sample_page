@@ -12,17 +12,19 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<script>
 		window.onload = function () {
+		    var _paq = window._paq = window._paq || [];
 		    var element = document.getElementById('generic');
 		    if (element) {
 			element.addEventListener("click", function () {
 			    console.log('click generic');
 			});
+	             const number = Math.floor(Math.random() * 1000000);
+	             _paq.push(['trackEvent', 'Generic', 'Generic Click', number]);
 		    }
 
-		    var _paq = window._paq = window._paq || [];
+		  
 
 		    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-		    _paq.push(['addListener', element]);
 		    _paq.push(['trackPageView']);
 		    _paq.push(['enableLinkTracking']);
 		    (function () {
@@ -69,6 +71,7 @@
 					<section id="wrapper">
 						<header>
 							<div id="generic" class="inner">
+								<input type="button" value="Button" />
 								<h2>Generic</h2>
 								<p>Phasellus non pulvinar erat. Fusce tincidunt nisl eget ipsum.</p>
 							</div>
