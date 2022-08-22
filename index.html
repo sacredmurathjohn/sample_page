@@ -15,6 +15,7 @@
     </noscript>
     <!-- Matomo -->
     <script>
+	let number = 0;
         window.onload = function () {
 	var _paq = window._paq = window._paq || [];
 		
@@ -22,8 +23,8 @@
             if (element) {
                 element.addEventListener("click", function () {
                     console.log('click');
-			_paq.push(['trackEvent', 'Contact', 'Email Link Click', 'name@example.com']);
-
+		    _paq.push(['trackEvent', 'Signup', 'Signup Click', number]);
+                    number = number + 1;
                 });
             }
 
