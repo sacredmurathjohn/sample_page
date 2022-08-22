@@ -6,7 +6,7 @@
 -->
 <html>
 <head>
-    <title>Generic - Solid State by HTML5 UP</title>
+    <title>Test Page (Generic)</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="assets/css/main.css"/>
@@ -17,9 +17,9 @@
             if (element) {
                 element.addEventListener("click", function () {
                     console.log('click generic');
+                    const number = Math.floor(Math.random() * 1000000);
+                    _paq.push(['trackEvent', 'Generic', 'Generic Click', number]);
                 });
-                const number = Math.floor(Math.random() * 1000000);
-                _paq.push(['trackEvent', 'Generic', 'Generic Click', number]);
             }
 
 
