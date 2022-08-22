@@ -22,7 +22,7 @@
             var element = document.getElementById('signup');
             if (element) {
                 element.addEventListener("click", function () {
-                    console.log('click');
+                    console.log('click', number);
                     _paq.push(['trackEvent', 'Signup', 'Signup Click', number]);
                     number = number + 1;
                 });
