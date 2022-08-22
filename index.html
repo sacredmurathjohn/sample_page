@@ -16,14 +16,14 @@
     <!-- Matomo -->
     <script>
         window.onload = function () {
-            let number = 0;
+            let number = 1;
             var _paq = window._paq = window._paq || [];
 
             var element = document.getElementById('signup');
             if (element) {
                 element.addEventListener("click", function () {
                     console.log('click', number);
-                    _paq.push(['trackEvent', 'Signup', 'Signup Click', number]);
+                    _paq.push(['trackEvent', 'Signup', 'Signup Click', 'Click Amount', number]);
                     number = number + 1;
                 });
             }
