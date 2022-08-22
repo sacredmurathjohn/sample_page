@@ -10,7 +10,30 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		window.onload = function () {
+		    var element = document.getElementById('generic');
+		    if (element) {
+			element.addEventListener("click", function () {
+			    console.log('click generic');
+			});
+		    }
+
+		    var _paq = window._paq = window._paq || [];
+
+		    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+		    _paq.push(['addListener', element]);
+		    _paq.push(['trackPageView']);
+		    _paq.push(['enableLinkTracking']);
+		    (function () {
+			var u = "https://sacredmurathjohn.matomo.cloud/";
+			_paq.push(['setTrackerUrl', u + 'matomo.php']);
+			_paq.push(['setSiteId', '1']);
+			var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+			g.async = true;
+			g.src = '//cdn.matomo.cloud/sacredmurathjohn.matomo.cloud/matomo.js';
+			s.parentNode.insertBefore(g, s);
+		})();
+        };
 	</head>
 	<body class="is-preload">
 
@@ -43,7 +66,7 @@
 				<!-- Wrapper -->
 					<section id="wrapper">
 						<header>
-							<div class="inner">
+							<div id="generic" class="inner">
 								<h2>Generic</h2>
 								<p>Phasellus non pulvinar erat. Fusce tincidunt nisl eget ipsum.</p>
 							</div>
